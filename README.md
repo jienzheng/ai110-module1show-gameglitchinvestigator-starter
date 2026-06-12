@@ -44,7 +44,7 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 4. User enters a guess of 37 → game returns "📉 Go LOWER!"
 5. User enters a guess of 30 → game returns "🎉 Correct!"
 6. Score updates and balloons appear on screen
-7. User clicks New Game to reset all state and start fresh
+7. User clicks New Game to reset all state and start fresh with new game
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
