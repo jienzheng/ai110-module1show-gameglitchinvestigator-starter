@@ -26,27 +26,41 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+   - The purpose of this game is to guess the correct number within a certain number of attempts.
 - [ ] Detail which bugs you found.
+   - The bugs I found were starting new game, hints showing different direction, difficulty range.
 - [ ] Explain what fixes you applied.
+   - Fixed the New Game button by resetting the number to 1
+   - Changed the hints in check_guess by changing the go higher and go lower text
+   - Fixed the difficulty so it is not hard coded
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. User opens the app and selects Normal difficulty (range: 1-100, 8 attempts)
+2. User enters a guess of 50 → game returns "📉 Go LOWER!"
+3. User enters a guess of 25 → game returns "📈 Go HIGHER!"
+4. User enters a guess of 37 → game returns "📉 Go LOWER!"
+5. User enters a guess of 30 → game returns "🎉 Correct!"
+6. Score updates and balloons appear on screen
+7. User clicks New Game to reset all state and start fresh
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
 ## 🧪 Test Results
 
 ```
-# Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
+(.venv) user ai110-module1show-gameglitchinvestigator-starter % pytest tests/
+=================================== test session starts ===================================
+platform darwin -- Python 3.14.5, pytest-9.0.3, pluggy-1.6.0
+rootdir: /Users/jien/CodePath/AI110/ai110-module1show-gameglitchinvestigator-starter
+plugins: anyio-4.13.0
+collected 3 items                                                                         
+
+tests/test_game_logic.py ...                                                        [100%]
+
+==================================== 3 passed in 0.01s ====================================
 ```
 
 ## 🚀 Stretch Features
